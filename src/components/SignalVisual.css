@@ -1,0 +1,37 @@
+.signal-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.signal-svg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(var(--accent-rgb), 0.4));
+}
+
+@keyframes movePacket {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.signal-packet {
+  animation-name: movePacket;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-svg animateMotion,
+  .signal-packet {
+    display: none;
+  }
+}
