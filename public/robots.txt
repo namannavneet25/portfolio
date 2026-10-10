@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://namannavneet.web.app/sitemap.xml
